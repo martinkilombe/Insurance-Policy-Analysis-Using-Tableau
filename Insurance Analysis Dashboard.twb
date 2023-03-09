@@ -1,0 +1,956 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20224.23.0209.1653                               -->
+<workbook original-version='18.1' source-build='2022.4.1 (20224.23.0209.1653)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Insurance Policies (Insurance Policies)' inline='true' name='federated.0t9u5ae0zmfimo1d3rtx01iafd27' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Insurance Policies' name='excel-direct.1d8smj21xydl8w1875enp0l6wwbo'>
+            <connection class='excel-direct' cleaning='yes' compat='no' dataRefreshTime='' filename='D:/GIT1/TABLEAU/Inurance Policies/Insurance Policies.xlsx' interpretationMode='1' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.1d8smj21xydl8w1875enp0l6wwbo' name='Insurance Policies' table='[&apos;Insurance Policies$&apos;]' type='table'>
+          <columns gridOrigin='A1:P10001:no:A1:P10001:1' header='yes' lost='0' outcome='1' processed='54438'>
+            <column datatype='string' name='ID' ordinal='0' />
+            <column datatype='string' name='birthdate' ordinal='1' />
+            <column datatype='string' name='marital_status' ordinal='2' />
+            <column datatype='string' name='car_use' ordinal='3' />
+            <column datatype='string' name='gender' ordinal='4' />
+            <column datatype='integer' name='kids_driving' ordinal='5' />
+            <column datatype='string' name='parent' ordinal='6' />
+            <column datatype='string' name='education' ordinal='7' />
+            <column datatype='string' name='car_make' ordinal='8' />
+            <column datatype='string' name='car_model' ordinal='9' />
+            <column datatype='string' name='car_color' ordinal='10' />
+            <column datatype='integer' name='car_year' ordinal='11' />
+            <column datatype='integer' name='claim_freq' ordinal='12' />
+            <column datatype='string' name='coverage_zone' ordinal='13' />
+            <column datatype='real' name='claim_amt' ordinal='14' />
+            <column datatype='real' name='household_income' ordinal='15' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.1d8smj21xydl8w1875enp0l6wwbo' name='Insurance Policies' table='[&apos;Insurance Policies$&apos;]' type='table'>
+          <columns gridOrigin='A1:P10001:no:A1:P10001:1' header='yes' lost='0' outcome='1' processed='54438'>
+            <column datatype='string' name='ID' ordinal='0' />
+            <column datatype='string' name='birthdate' ordinal='1' />
+            <column datatype='string' name='marital_status' ordinal='2' />
+            <column datatype='string' name='car_use' ordinal='3' />
+            <column datatype='string' name='gender' ordinal='4' />
+            <column datatype='integer' name='kids_driving' ordinal='5' />
+            <column datatype='string' name='parent' ordinal='6' />
+            <column datatype='string' name='education' ordinal='7' />
+            <column datatype='string' name='car_make' ordinal='8' />
+            <column datatype='string' name='car_model' ordinal='9' />
+            <column datatype='string' name='car_color' ordinal='10' />
+            <column datatype='integer' name='car_year' ordinal='11' />
+            <column datatype='integer' name='claim_freq' ordinal='12' />
+            <column datatype='string' name='coverage_zone' ordinal='13' />
+            <column datatype='real' name='claim_amt' ordinal='14' />
+            <column datatype='real' name='household_income' ordinal='15' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Insurance Policies]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:P10001:no:A1:P10001:1&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>54438</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ID]</local-name>
+            <parent-name>[Insurance Policies]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_R150_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Insurance Policies_DBCE0A9466FA41A28FD2013224487113]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birthdate</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[birthdate]</local-name>
+            <parent-name>[Insurance Policies]</parent-name>
+            <remote-alias>birthdate</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_R150_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Insurance Policies_DBCE0A9466FA41A28FD2013224487113]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>marital_status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[marital_status]</local-name>
+            <parent-name>[Insurance Policies]</parent-name>
+            <remote-alias>marital_status</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_R150_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Insurance Policies_DBCE0A9466FA41A28FD2013224487113]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>car_use</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[car_use]</local-name>
+            <parent-name>[Insurance Policies]</parent-name>
+            <remote-alias>car_use</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_R150_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Insurance Policies_DBCE0A9466FA41A28FD2013224487113]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[Insurance Policies]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_R150_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Insurance Policies_DBCE0A9466FA41A28FD2013224487113]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>kids_driving</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[kids_driving]</local-name>
+            <parent-name>[Insurance Policies]</parent-name>
+            <remote-alias>kids_driving</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Insurance Policies_DBCE0A9466FA41A28FD2013224487113]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>parent</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[parent]</local-name>
+            <parent-name>[Insurance Policies]</parent-name>
+            <remote-alias>parent</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_R150_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Insurance Policies_DBCE0A9466FA41A28FD2013224487113]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>education</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[education]</local-name>
+            <parent-name>[Insurance Policies]</parent-name>
+            <remote-alias>education</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_R150_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Insurance Policies_DBCE0A9466FA41A28FD2013224487113]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>car_make</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[car_make]</local-name>
+            <parent-name>[Insurance Policies]</parent-name>
+            <remote-alias>car_make</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_R150_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Insurance Policies_DBCE0A9466FA41A28FD2013224487113]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>car_model</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[car_model]</local-name>
+            <parent-name>[Insurance Policies]</parent-name>
+            <remote-alias>car_model</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_R150_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Insurance Policies_DBCE0A9466FA41A28FD2013224487113]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>car_color</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[car_color]</local-name>
+            <parent-name>[Insurance Policies]</parent-name>
+            <remote-alias>car_color</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_R150_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Insurance Policies_DBCE0A9466FA41A28FD2013224487113]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>car_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[car_year]</local-name>
+            <parent-name>[Insurance Policies]</parent-name>
+            <remote-alias>car_year</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Insurance Policies_DBCE0A9466FA41A28FD2013224487113]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_freq</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[claim_freq]</local-name>
+            <parent-name>[Insurance Policies]</parent-name>
+            <remote-alias>claim_freq</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Insurance Policies_DBCE0A9466FA41A28FD2013224487113]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>coverage_zone</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[coverage_zone]</local-name>
+            <parent-name>[Insurance Policies]</parent-name>
+            <remote-alias>coverage_zone</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_R150_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Insurance Policies_DBCE0A9466FA41A28FD2013224487113]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_amt</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[claim_amt]</local-name>
+            <parent-name>[Insurance Policies]</parent-name>
+            <remote-alias>claim_amt</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Insurance Policies_DBCE0A9466FA41A28FD2013224487113]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>household_income</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[household_income]</local-name>
+            <parent-name>[Insurance Policies]</parent-name>
+            <remote-alias>household_income</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Insurance Policies_DBCE0A9466FA41A28FD2013224487113]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='SUM Claims' datatype='real' name='[Calculation_1058627390047096834]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([claim_amt])' />
+      </column>
+      <column caption='SUM Household Income' datatype='real' name='[Calculation_1058627390047371268]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([household_income])' />
+      </column>
+      <column caption='AVG Claims' datatype='real' name='[Calculation_1058627390048014341]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG([claim_amt])' />
+      </column>
+      <column caption='AVG Household Income' datatype='real' name='[Calculation_1058627390048153606]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_1058627390047371268]' />
+      </column>
+      <column datatype='date' name='[Car Year (date)]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='MAKEDATE( [car_year], 1, 1 )' />
+      </column>
+      <column datatype='integer' name='[Claim Amt (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='3' formula='[claim_amt]' peg='0' size='1379' />
+      </column>
+      <column caption='Claim Amt (Disc)' datatype='real' name='[Claim Amt (copy)_1058627390051971079]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='[claim_amt]' />
+      </column>
+      <column caption='Household Income (disc)' datatype='real' name='[Household Income (copy)_1058627390052593672]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='[household_income]' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='Insurance Policies' datatype='table' name='[__tableau_internal_object_id__].[Insurance Policies_DBCE0A9466FA41A28FD2013224487113]' role='measure' type='quantitative' />
+      <column caption='Birthdate' datatype='string' name='[birthdate]' role='dimension' type='nominal' />
+      <column caption='Car Color' datatype='string' name='[car_color]' role='dimension' type='nominal' />
+      <column caption='Car Make' datatype='string' name='[car_make]' role='dimension' type='nominal' />
+      <column caption='Car Model' datatype='string' name='[car_model]' role='dimension' type='nominal' />
+      <column caption='Car Use' datatype='string' name='[car_use]' role='dimension' type='nominal' />
+      <column caption='Car Year' datatype='integer' name='[car_year]' role='dimension' type='quantitative' />
+      <column caption='Claim Amt' datatype='real' name='[claim_amt]' role='measure' type='quantitative' />
+      <column caption='Claim Freq' datatype='integer' name='[claim_freq]' role='measure' type='quantitative' />
+      <column caption='Coverage Zone' datatype='string' name='[coverage_zone]' role='dimension' type='nominal' />
+      <column caption='Education' datatype='string' name='[education]' role='dimension' type='nominal' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Household Income' datatype='real' name='[household_income]' role='measure' type='quantitative' />
+      <column caption='Kids Driving' datatype='integer' name='[kids_driving]' role='measure' type='quantitative' />
+      <column caption='Marital Status' datatype='string' name='[marital_status]' role='dimension' type='nominal' />
+      <column caption='Parent' datatype='string' name='[parent]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='ID' />
+        <field-sort-custom-order field='birthdate' />
+        <field-sort-custom-order field='marital_status' />
+        <field-sort-custom-order field='car_use' />
+        <field-sort-custom-order field='gender' />
+        <field-sort-custom-order field='kids_driving' />
+        <field-sort-custom-order field='parent' />
+        <field-sort-custom-order field='education' />
+        <field-sort-custom-order field='car_make' />
+        <field-sort-custom-order field='car_model' />
+        <field-sort-custom-order field='car_color' />
+        <field-sort-custom-order field='car_year' />
+        <field-sort-custom-order field='claim_freq' />
+        <field-sort-custom-order field='Calculation_1058627390047096834' />
+        <field-sort-custom-order field='Calculation_1058627390048014341' />
+        <field-sort-custom-order field='Calculation_1058627390047371268' />
+        <field-sort-custom-order field='Calculation_1058627390048153606' />
+        <field-sort-custom-order field='coverage_zone' />
+        <field-sort-custom-order field='claim_amt' />
+        <field-sort-custom-order field='Claim Amt (copy)_1058627390051971079' />
+        <field-sort-custom-order field='household_income' />
+        <field-sort-custom-order field='Household Income (copy)_1058627390052593672' />
+        <field-sort-custom-order field='Calculation_1058627390046699521' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Insurance Policies' id='Insurance Policies_DBCE0A9466FA41A28FD2013224487113'>
+            <properties context=''>
+              <relation connection='excel-direct.1d8smj21xydl8w1875enp0l6wwbo' name='Insurance Policies' table='[&apos;Insurance Policies$&apos;]' type='table'>
+                <columns gridOrigin='A1:P10001:no:A1:P10001:1' header='yes' lost='0' outcome='1' processed='54438'>
+                  <column datatype='string' name='ID' ordinal='0' />
+                  <column datatype='string' name='birthdate' ordinal='1' />
+                  <column datatype='string' name='marital_status' ordinal='2' />
+                  <column datatype='string' name='car_use' ordinal='3' />
+                  <column datatype='string' name='gender' ordinal='4' />
+                  <column datatype='integer' name='kids_driving' ordinal='5' />
+                  <column datatype='string' name='parent' ordinal='6' />
+                  <column datatype='string' name='education' ordinal='7' />
+                  <column datatype='string' name='car_make' ordinal='8' />
+                  <column datatype='string' name='car_model' ordinal='9' />
+                  <column datatype='string' name='car_color' ordinal='10' />
+                  <column datatype='integer' name='car_year' ordinal='11' />
+                  <column datatype='integer' name='claim_freq' ordinal='12' />
+                  <column datatype='string' name='coverage_zone' ordinal='13' />
+                  <column datatype='real' name='claim_amt' ordinal='14' />
+                  <column datatype='real' name='household_income' ordinal='15' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Claim Amount Over Time'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Claim Amount Over Time</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Insurance Policies (Insurance Policies)' name='federated.0t9u5ae0zmfimo1d3rtx01iafd27' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0t9u5ae0zmfimo1d3rtx01iafd27'>
+            <column caption='SUM Claims' datatype='real' name='[Calculation_1058627390047096834]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([claim_amt])' />
+            </column>
+            <column datatype='date' name='[Car Year (date)]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='MAKEDATE( [car_year], 1, 1 )' />
+            </column>
+            <column caption='Car Year' datatype='integer' name='[car_year]' role='dimension' type='quantitative' />
+            <column caption='Claim Amt' datatype='real' name='[claim_amt]' role='measure' type='quantitative' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[claim_amt]' derivation='Sum' name='[sum:claim_amt:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Car Year (date)]' derivation='Year-Trunc' name='[tyr:Car Year (date):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1058627390047096834]' derivation='User' name='[usr:Calculation_1058627390047096834:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[sum:claim_amt:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[none:gender:nk]' />
+              <text column='[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[usr:Calculation_1058627390047096834:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[sum:claim_amt:qk]</rows>
+        <cols>[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[tyr:Car Year (date):qk]</cols>
+      </table>
+      <simple-id uuid='{D7E8BBF3-40C9-4E6E-A0C1-7BEDAA6925B7}' />
+    </worksheet>
+    <worksheet name='Household Income Table'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Household Income Table</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Insurance Policies (Insurance Policies)' name='federated.0t9u5ae0zmfimo1d3rtx01iafd27' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0t9u5ae0zmfimo1d3rtx01iafd27'>
+            <column caption='SUM Household Income' datatype='real' name='[Calculation_1058627390047371268]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([household_income])' />
+            </column>
+            <column caption='AVG Household Income' datatype='real' name='[Calculation_1058627390048153606]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_1058627390047371268]' />
+            </column>
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column caption='Household Income' datatype='real' name='[household_income]' role='measure' type='quantitative' />
+            <column caption='Marital Status' datatype='string' name='[marital_status]' role='dimension' type='nominal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[marital_status]' derivation='None' name='[none:marital_status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1058627390048153606]' derivation='User' name='[usr:Calculation_1058627390048153606:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[none:marital_status:nk]' value='215' />
+            <format attr='height' field='[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[none:gender:nk]' value='57' />
+          </style-rule>
+          <style-rule element='field-labels-decoration'>
+            <format attr='background-color' value='#fbf7fb' />
+          </style-rule>
+          <style-rule element='field-labels-spanner'>
+            <format attr='background-color' scope='rows' value='#00000000' />
+            <format attr='background-color' scope='cols' value='#fbf7fb' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[usr:Calculation_1058627390048153606:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[usr:Calculation_1058627390048153606:qk]' />
+              <text column='[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[usr:Calculation_1058627390048153606:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='has-stroke' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[none:gender:nk]</rows>
+        <cols>[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[none:marital_status:nk]</cols>
+      </table>
+      <simple-id uuid='{2BC78EAB-B86F-4CDD-8428-996BB4858D1D}' />
+    </worksheet>
+    <worksheet name='Male-Female Claims Frequency'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Insurance Policies (Insurance Policies)' name='federated.0t9u5ae0zmfimo1d3rtx01iafd27' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0t9u5ae0zmfimo1d3rtx01iafd27'>
+            <column caption='Claim Freq' datatype='integer' name='[claim_freq]' role='measure' type='quantitative' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[claim_freq]' derivation='Sum' name='[sum:claim_freq:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[none:gender:nk]' value='129' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[none:gender:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[sum:claim_freq:qk]</rows>
+        <cols>[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[none:gender:nk]</cols>
+      </table>
+      <simple-id uuid='{3B9F19DE-3D8F-4CA2-BA78-C2F95F4B33D2}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{C62AE342-226A-4D8D-9C91-E8C336D08459}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Male-Female Claims Frequency'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[none:gender:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[none:claim_amt:ok]</field>
+            <field>[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[none:education:nk]</field>
+            <field>[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[none:gender:nk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{382D0EB0-A759-4035-80BC-1C8DF1DCC52F}' />
+    </window>
+    <window class='worksheet' name='Household Income Table'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[usr:Calculation_1058627390048153606:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[none:marital_status:nk]</field>
+            <field>[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[usr:Calculation_1058627390048153606:qk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{A8BB092B-374F-4025-9E7D-72F99C344899}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Claim Amount Over Time'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='100'>
+            <card pane-specification-id='0' param='[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[none:gender:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[none:gender:nk]</field>
+            <field>[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[tyr:Car Year (date):ok]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{65B23EE9-1225-4156-A799-EA6D3A1C8F56}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{6BD39C43-4BE7-434A-890E-AE4EDAE15571}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Claim Amount Over Time' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='158' name='Household Income Table' width='192'>
+      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
+      gg==
+    </thumbnail>
+    <thumbnail height='192' name='Male-Female Claims Frequency' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 4' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
