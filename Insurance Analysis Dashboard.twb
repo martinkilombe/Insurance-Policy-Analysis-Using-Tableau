@@ -25,7 +25,7 @@
       <connection class='federated'>
         <named-connections>
           <named-connection caption='Insurance Policies' name='excel-direct.1d8smj21xydl8w1875enp0l6wwbo'>
-            <connection class='excel-direct' cleaning='yes' compat='no' dataRefreshTime='' filename='D:/GIT1/TABLEAU/Inurance Policies/Insurance Policies.xlsx' interpretationMode='1' password='' server='' validate='no' />
+            <connection class='excel-direct' cleaning='yes' compat='no' dataRefreshTime='' filename='D:/GIT1/TABLEAU/Insurance Policies/Insurance Policies.xlsx' interpretationMode='1' password='' server='' validate='no' />
           </named-connection>
         </named-connections>
         <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.1d8smj21xydl8w1875enp0l6wwbo' name='Insurance Policies' table='[&apos;Insurance Policies$&apos;]' type='table'>
@@ -355,7 +355,7 @@
       <column datatype='date' name='[Car Year (date)]' role='dimension' type='ordinal'>
         <calculation class='tableau' formula='MAKEDATE( [car_year], 1, 1 )' />
       </column>
-      <column datatype='integer' name='[Claim Amt (bin)]' role='dimension' type='quantitative'>
+      <column aggregation='None' datatype='integer' name='[Claim Amt (bin)]' role='dimension' type='quantitative'>
         <calculation class='bin' decimals='3' formula='[claim_amt]' peg='0' size='1379' />
       </column>
       <column caption='Claim Amt (Disc)' datatype='real' name='[Claim Amt (copy)_1058627390051971079]' role='dimension' type='ordinal'>
@@ -445,7 +445,7 @@
       <layout-options>
         <title>
           <formatted-text>
-            <run bold='true'>Claim Amount Over Time</run>
+            <run bold='true'>Gender-Claim Amount Over Time</run>
           </formatted-text>
         </title>
       </layout-options>
@@ -498,6 +498,56 @@
         <cols>[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[tyr:Car Year (date):qk]</cols>
       </table>
       <simple-id uuid='{D7E8BBF3-40C9-4E6E-A0C1-7BEDAA6925B7}' />
+    </worksheet>
+    <worksheet name='Claim Amount by Vehicles types over the years'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Claim Amount by Vehicles types over the years</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Insurance Policies (Insurance Policies)' name='federated.0t9u5ae0zmfimo1d3rtx01iafd27' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0t9u5ae0zmfimo1d3rtx01iafd27'>
+            <column datatype='date' name='[Car Year (date)]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='MAKEDATE( [car_year], 1, 1 )' />
+            </column>
+            <column caption='Car Use' datatype='string' name='[car_use]' role='dimension' type='nominal' />
+            <column caption='Car Year' datatype='integer' name='[car_year]' role='dimension' type='quantitative' />
+            <column caption='Claim Amt' datatype='real' name='[claim_amt]' role='measure' type='quantitative' />
+            <column-instance column='[car_use]' derivation='None' name='[none:car_use:nk]' pivot='key' type='nominal' />
+            <column-instance column='[claim_amt]' derivation='Sum' name='[sum:claim_amt:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Car Year (date)]' derivation='Year-Trunc' name='[tyr:Car Year (date):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[none:car_use:nk]' />
+              <text column='[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[sum:claim_amt:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[sum:claim_amt:qk]</rows>
+        <cols>[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[tyr:Car Year (date):qk]</cols>
+      </table>
+      <simple-id uuid='{C62AE342-226A-4D8D-9C91-E8C336D08459}' />
     </worksheet>
     <worksheet name='Household Income Table'>
       <layout-options>
@@ -625,7 +675,7 @@
       </table>
       <simple-id uuid='{3B9F19DE-3D8F-4CA2-BA78-C2F95F4B33D2}' />
     </worksheet>
-    <worksheet name='Sheet 4'>
+    <worksheet name='Sheet 5'>
       <table>
         <view>
           <datasources />
@@ -643,7 +693,7 @@
         <rows />
         <cols />
       </table>
-      <simple-id uuid='{C62AE342-226A-4D8D-9C91-E8C336D08459}' />
+      <simple-id uuid='{EB73B437-D322-4C67-95EC-0B248F38EC10}' />
     </worksheet>
   </worksheets>
   <windows source-height='30'>
@@ -722,7 +772,7 @@
       </viewpoint>
       <simple-id uuid='{A8BB092B-374F-4025-9E7D-72F99C344899}' />
     </window>
-    <window class='worksheet' maximized='true' name='Claim Amount Over Time'>
+    <window class='worksheet' name='Claim Amount Over Time'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -759,7 +809,7 @@
       </viewpoint>
       <simple-id uuid='{65B23EE9-1225-4156-A799-EA6D3A1C8F56}' />
     </window>
-    <window class='worksheet' name='Sheet 4'>
+    <window class='worksheet' maximized='true' name='Claim Amount by Vehicles types over the years'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -779,11 +829,45 @@
             <card type='title' />
           </strip>
         </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[none:car_use:nk]' type='color' />
+          </strip>
+        </edge>
       </cards>
       <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[none:car_use:nk]</field>
+            <field>[federated.0t9u5ae0zmfimo1d3rtx01iafd27].[yr:Car Year (date):ok]</field>
+          </color-one-way>
+        </highlight>
         <default-map-tool-selection tool='2' />
       </viewpoint>
       <simple-id uuid='{6BD39C43-4BE7-434A-890E-AE4EDAE15571}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E12B95C1-F81F-4EBA-97CD-E448CCB47F0B}' />
     </window>
   </windows>
   <thumbnails>
@@ -845,6 +929,96 @@
       fvtv/85v/vUr/uubHT65f5dBAEspBze1xP/97/9w6/aHDPojSrl52qOIApAZ4URJGMPtm/P8
       x38+pLJ8SK1WpVLM8s9f/Zr/friLCQI+/+RvGXZOWVm9T21/k8ebr1jOpfnqX37NBwuG7fUt
       6t0e+VyOWq3G/wP5BpspVDfRgQAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Claim Amount by Vehicles types over the years' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAASM0lEQVR4nO3daXNcVX7H8e/depVa6k2tlmx5t5FtsLGxBxhmqjKpBCpTNZU8SPIsLyDv
+      IM94E3mQ56lKzYPMJJliCGFgYICh2BnAGMmWZGtpLS31vt2+y8kDG2PZgrGMZFuc/6fK1e2r
+      2+ec7r6/vufce0+3oZRSCKEpcycLkyyJvWZHAxCG4U4WJ8Su29EACLHXSACE1iQAQmsSAKE1
+      ezsrt+oVFleq5DNJmq7CCj3GRjMslnscGM/tVhuF2DXbCkC71aLTatFIRrGVolMrc9X1sSIO
+      YRgShqEcChV7yrYCYNk2UcfCCAO6niI3NkGlWmcgFsM0TZRSWJa1W20VYscZO3kmOAgCCYDY
+      U2QQLLQmARBakwAIrUkAhNYkAEJrEgChNQmA0JoEQGhNAiC0JgEQWpMACK1JAITWJABCaxIA
+      oTUJgNCaBEBobVszwsIgwA8CbNu+NfXRNE3CUGFZkiWx92wrAJ1Wg0tfXSGTTeN6il6jwpFD
+      +7i20efsY4cA+XpEsbdsa0qkCn0WS2sEvksQKmKmz3K1Ty4zxMT+cYIgwDRlTyD2ju0FIPDw
+      lIXyOnT6kIxH8H0fy7KJRiMyJ1jsOTIpXmhN+itCaxIAoTUJgNCaBEBoTQIgtCYBEFqTAAit
+      SQCE1iQAQmsSAKE1CYDQmgRAaE0CILQmARBakwAIrUkAhNa2NSfYbde5tlIlNxCh4SqMsM/+
+      0Szz6z0O7RvZrTYKsWu2FYDSyiqqH1J3bRxD0WvVmJ4PiUQj8kPZYk/aVgDyuRwLiytYRkjP
+      h9zYfirVBoOJuPxQttiTZE6w0JoMgoXWJABCaxIAoTUJgNCaBEBoTQIgtCYBEFqTAAitSQCE
+      1iQAQmsSAKE1CYDQmgRAaE0CILQmARBakwAIrUkAhNa2NSWyurLEcqvPoKNouQqv2+TogSIz
+      ZZfHj03sVhuF2DXbCoDhOHjNdXrZDMlYCIbDVwtVMqmkTIoXe9K2AhCNRkkODZMfjNNyFels
+      jkS3SzQak0nxYk+SSfFCazIIFlqTAAitSQCE1iQAQmsSAKE1CYDQmgRAaE0CILQmARBakwAI
+      rUkAhNbuCoBSPq/97yu89fpb9B5Gi4R4gLbYA5jkc8OYsfj2LhUVYg+6axs3DBO318XzI8iV
+      /eKHbssxgGGaOI7zoNsixAN3VwA8t4MdjbFeXpc9gPjBu6sL1GtU2Wh08Hx/qxEyq2trJGM2
+      DRdsAnKZFOVaj0Ju+MG0WIgdtOWMML/v0mx1SGXS3D6/q9Oo8OXsEiOZIZRStCtl4ukcrrI4
+      fmCcIAgwDOMBNl+I72fLAz2ffvQ+ZmyYJzLpTcs7nS79TpP+QIx+YJArFlldr5NOD8ucYLEn
+      bRkAA0W327trDJAbHSc3Or5p2cgd/xdiL9mim+8SjaYIg+BhtEeIB+quABhGFGgyfWmO8CE0
+      SIgH6a4uUBgEZAqHOHIsQHrz4ofurgC015eYnisRKEPOA4gfvLu6QP1Om2Qmh6UC6QKJH7y7
+      zgMopVhfXcaKDZIZHtxWYfLNcGKvka9GFFqTCTFCaxIAoTUJgNCaBEBoTQIgtCYBEFqTAAit
+      SQCE1iQAQmvb+uof33NptHsMJqK4PliGIhaL0Ov5xOPR3WqjELtmewHo95iZniGdHyL0Fe3a
+      BuP7iqw0Q04fnUApRRjKJXRi79hWFygIQixD4YcQKigUcsyv1ElFLZkML/akbV0M53t9Oj2P
+      RMzBCyDiWIRhiGEY2LYtF8OJPUeuBhVak6NAQmsSAKE1CYDQmgRAaE0CILQmARBakwAIrUkA
+      hNYkAEJrEgChNQmA0JoEQGhNAiC0JgEQWpMACK1JAITWtjUnuNdpsFDaIJ8ZoOWChU8hN8RK
+      xWWskP7zBQjxiNlWAOxInIgJlXYPWymalTU63R6BYROGQ4RhyA5OMBNi120rABsrizR7fQZM
+      RduDXHGc8kadoXRcfihb7EkyJ1hoTQbBQmsSAKE1CYDQmgRAaE0CILQmARBakwAIrUkAhNYk
+      AEJrEgChNQmA0JoEQGhNAiC0JgEQWpMACK1JAITWJABCa9ubFN9usLhaxaFP01W4rTrHD48z
+      s+ZydvLQbrVRiF2zrQDEkikG4m3cPgzEFcPRQaYXa2SHBwnDUCbFiz1nWwFoN6rU6g2KowV6
+      AQwlo6T6HrbtyKR4sSfJpHihNRkEC61JAITWJABCaxIAoTUJgNCaBEBoTQIgtCYBENoJQ5d3
+      33yDuaU1CYDQj2E4ZAt50qkBCYDYm5avz/DfL78KKL58+3eUugG/e+01+u06b777/o3ln37I
+      G2++yasv/SfvfnyJ199+D4DQazE7s8jC7PT2rgUS4lFhWhbnzp4FDA4c2E8Ni/0T+4gkhxjN
+      3fi5rkg8zpnDpyjNX2Xy1CmuTF8BwIqkeOHnzxOGoQRAPCgB77/9R8YOHaHWarM/O8CX19Z4
+      +vwZLn3yPo0wSsKBMyeP86epec6cPoHxHaW5vS7zGxV67TrdWgWjPUW9tAQKlpZKNDt9nH4D
+      11hm/8RBvHaFpaVFcqP7yA7FATBNUy6GE/dm7spl0oV9XL92ndFsirnSBk+dP4vbqqAiQ0RU
+      h7bvsLowy5ETJ3GsOzbfoM1v/ud3HJx8HMfwCb0+YHB0chIn7HDp6hq24XH82DGmr1zlxGPH
+      vzMA90MFPv7s65jZo6huFfpt2QOIe+FjmRGuXbtOozTDUPFnRKwyBuC2Vij7Dm71Yzplh6V2
+      GWOgyImJzOYiAh8nkcTr1piameXokSMsV5oMpVcI3S7Hjh/m97/9FQCXvvic4XyR0ezgzjRf
+      KcLaPO57/4b/1UvYJ17ATI1B6MseQNyDsMcv/+PXPHnxKeanPmP81EVCP2SikGF94VMuLduY
+      7iLNMjgZh6MnLvLEibF7Krrd7pBMJnav6fVF3Hf/FfptnHP/hDXyGDhJDOPG/mVXAqBUwKXP
+      PufI5Cma9RrpgSjz5RZHJsaor69Qc0PKC/OMHjpKp17l2PFjO767EztIKXqui2VZhGFIxHFQ
+      hkF5bY1MOk0IRCIOKlR4nkckErm1gW0qJgyg30K5DVSviXLr+F/9FufU32GNn/ueTVTgtVG9
+      BoQ+KvDwLv0X4fo00Wf+GXP0iU1t8oOQ1Wr7/gJQW1+l4Sos5VMspCmt99hXzH4TgNDjg3fe
+      IZYexVchduDS6wc8dfEcL//6V0w+9Rxpu8fU1XkS+Sxxa4DhmX9n+OBZsOMYhgmGAYb5Lf+M
+      m+vcuZ4B3LnOt//99lvDMIE71r3jvoFxs4w7Xny3Sdhcwcod+z5vIagbtzduFDcX3Lx/+7Jv
+      1t18f6vHbb6/qewty7j3soO1SxhOHJwkXrdFt9ul2XF5v5rjDH8i6q5h9evYQRcrdLFNcBKD
+      WPEhjGgKIzbEwuWPyNht+vt+SuPQ35KMmiTpEA9qWMpD1ZcI22vY+y6AaRO2y4QrnxGsXYYw
+      uNnGEFRIYMZZahocGMvR86GZPUe78CzVlkun59F1PRqdPrOlKr2+TyLm3N8YoNnrYyhFs1qm
+      0/PAtgnDNEopfN/H77Vpdjt4do3Z2RkOHTjIRqNLZX2DVGqAy1NXGE3HOX5wlLc/n2Z07AT/
+      8ocDHH5viogRfFORcfP13rTR3bEBbvk347bVjC3WNb79sfeyzDC+uTUM8Hoor4ORyN1c547P
+      FAUY6q7F98wwbtsQv27T3VXcWPzd+1L1zYt6o1h1RxWbK966OTdLUP0OOAmIp7EjMeLRGI4z
+      wPRSlaWJJ0EpPN8nUOAH4IchflttqvOr+TTFTJL9DJBaeBc3tOmoGJ2+T9hrgVuHfgfC1zBC
+      DwwLFUvTsp9ncCDJ7e9Du+dzbbnGpJcj5lgMtWMMrM2THUqQjEcYSjjsHxnk508fIRaxsC3r
+      /vYApYVrNF1FdijBRqVOamiI4mjhti6Qwuv3sWwbz/dxbJtQKSobFXK5DAoD0zAwDAPf9zEt
+      i4+nVzh9KI9t7cS5OWPL7X93KAg8VK+Okczdtnz3Kt7xku+3QKUwbr6PwK3bMFQ3t8kt9pa3
+      7VGUgtJ6k3w6QdSx71jvxt5KqRuBuX0zNYwb7++d5QdhyEqlxb58asu6ARbnplmueZw9PsrU
+      UuvRGQS3qmU++WKK8eIIDRfOnjzKZx9/wPDYUczeGmYiT6VW5/SJIzvV3PuyPHuJbqxIZ22a
+      4sQkn374LsfPPkPK7PDhZ5fZPz7GYrlBMWXRVgmeOjP5UNu7U65c+pT5jS6OanP+yQu88+b/
+      cfjCCxwYDPjly2/y7OnDXJpfYzQBFX+Q53/6OK+/+g7p7DDV2ganL/4FVrfMWsOlV1nGHByh
+      VrrKodMXmBi98cGxMj/Le59f4XBxmJmVGnavRuHoGR4bT/Pyyy9z+sd/SatWJ580mFqocHh0
+      kHIbTh/K8sVCg2fPHuPdt/6IHUvQa7cZG81Q7po8c/7xW8/jTx+8g2uniBserhF5dC6FSKSG
+      yaUSlCs1Lk9NgQqoNpp8+eUnLCzO03IdbMKH3UyKxSJeEDA2VqBerXPs9Elq5SrxZJJCYYxM
+      Js2+YoHh4QyFkdyfL3CPsCNRzj7xBBMTB8GKkskOoTyfTz/9hFa1jhFxSMYHyI8UeeaZ8xAG
+      tN0utXqNbrdDzwvIFsYx8XAcm7nr1zEtk2ajdasOwzR58tw5xkfzPPWji1hmjDAMGMwWmDxz
+      npOH9jGUiGLZEc49+QSO43D9+iyv//4PlBYWMEyHwYQDhkXorjE4nKFY2PweZLM56vU6vU6D
+      UmkF68UXX3xxp14kpRSmeX+ZWrryBVMrDQ6MjaBMG8c2McM+sfgA1fU1+j7MXZ2iOHGIeOTh
+      nb6Yu/IV19eq9Cqr9K04G0sLpFJx1stVVipV+u06zW5AbWOJ0EpQuHlafq9bXrhGtePSLC/T
+      DaDbUyQjcOzxJzl54ghuq8FgZoT8SI7BRBwDxfpamZFiEc/zCcKAoFPj8lyJQiZFbnScsNdh
+      KF8knUoCUC2vcr1UZnx8gtxwisDvkk8naXgRRrNpGhvLzFxbJRJVrFe7ZFNRogM5fvLcs6QG
+      Y6wvr1KuNxkdLVDr2bjNdVwiFEeyt55HKp3jyMEJxvcf5MSxw49OF2gTFdLpuiQS8e9f1gOg
+      lLpx1OlhN+QRttuv0deb8bf1/b/NoxkAIR6QR2YMIMTDIAEQWtvR0eTXx/W/7oepm8eJb7+/
+      1bJ7uX/7sjAMbw22t/O43arv9v7nnfe3U9/Xj3vUnt/DrO/71P2176pvRwNgmuZ9HwXaDsMw
+      Hkg9Ut/u1Xf7CbQHUd+3Pb8dHQQLsdfsjfkAKuTqF1+S3Z9ndm6VQiFPp9sjl4ozs7DKhXNn
+      drzK1fnrEI9RWioxNJyh36wRSWWorC1z8uwFEs7OfnqVZmdwhgdZmC8xPJymtbFGqjBOeXmJ
+      J558iqi9s/UtTE2RHM0wN1eiUCiyOHeFo8ePMzs3z7nz57DNna2vXlmn3ulTX18mPpSnubHM
+      /oNHWJy7wsSpi2QSO3v0sFopY0YMpq8sk4o7+DiM5ge4em2ZH50/e2u9vTEINkxyuSyRwQwJ
+      0yMwowwmYzi2TSQa3ZUqM9kcdiRKLpWk1eqQGM5RzKdJxGOocOfPSGezOaxoguxAlE7XJZlM
+      YJoW8XhsV350JJfLYcYGyCRsFuZm6Ho+PS8kFovuSn1DmRwRy2Akn6NRrxCLJdioNxkcSBD4
+      wZ8vYJuGM3msxDBDkYCNjRr9zgbNnkE0Etm03p7ZA9S6baIbNonhAvmkycJyC2tokHxudy43
+      2Kht0FM2jhPj2OEsCwuLtGJR4qkMicjOf25UmjU8I4IZSXJ0X55SaZX0QBQVZHf80x+g0m6g
+      +h5WdJCLT5/E91z6vS5hOrfjn/4AG2vLtHoeA1GTxyZPUVlZJJ0fYWXFIDPo7Hx9qyX6hk00
+      meHpyXEWF0sMJ0xsM79pPRkDCK3tjS6QELtEAiC0oUKPdqe3aZl0gcQj5YN3/kA7tJg8dgAj
+      MkilNE9hbAJXeWQSUeZXa3z1/huceOYFFi9/yMSJx+k3a4yM7ycMfcrXpig1fE6dPE4inmB+
+      ocT+faMEfkDp2gwHTpzklZde4emfXMBUO/y9QEJ8X8qr8epbl+mszzE+sY+luTnW2wn++u//
+      hqXPP8L1FZbt8NyPn+H137/Bcxcmeek3r1DqxvmHf/wF+YTJK6+9jd/eYDg1wNy1Baz8QX7x
+      Vz/jy08+Igh6eKEJls/6Rov/B/UGUZNg8KwFAAAAAElFTkSuQmCC
     </thumbnail>
     <thumbnail height='158' name='Household Income Table' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAACeCAYAAABkWAWAAAAACXBIWXMAAA7DAAAOwwHHb6hk
@@ -938,7 +1112,7 @@
       ADFNAYhpCkBMUwBimgIQ0xSAmKYAxDQFIKYpADFNAYhpCkBMUwBimgIQ0xSAmKYAxDQFIKYp
       ADFNAYhpCkBMUwBimgIQ0xSAmKYAxDQFIKYpADHtv+jfKgEfYMAWAAAAAElFTkSuQmCC
     </thumbnail>
-    <thumbnail height='192' name='Sheet 4' width='192'>
+    <thumbnail height='192' name='Sheet 5' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
       AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
       gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
